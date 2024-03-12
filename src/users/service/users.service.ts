@@ -6,7 +6,10 @@ import { CreateUserDto } from '../dto/create-user.dto';
 @Injectable()
 export class UsersService {
   async create(createUserDto: CreateUserDto): Promise<User> {
-    return User.create(createUserDto);
+    const user = User.create(createUserDto);
+    // Log newly created user to the console & return
+    console.log('User created', user);
+    return user;
   }
 
   async findAll(): Promise<User[]> {
