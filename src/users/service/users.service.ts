@@ -13,18 +13,22 @@ export class UsersService {
   }
 
   async findAll(): Promise<User[]> {
+    // Return all users
     return User.findAll();
   }
 
   async findOne(id: number): Promise<User | null> {
+    // Get a user by id
     return User.findByPk(id);
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
+    // Get a user by id & update
     return User.update(updateUserDto, { where: { id } });
   }
 
   async remove(id: number): Promise<number> {
+    // Delete a user by id
     return User.destroy({ where: { id } });
   }
 }
