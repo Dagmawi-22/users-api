@@ -27,9 +27,9 @@ cd users-api
 
 # Run project
 customize you .env filr as stated in the .env.example
-nest start --watch
+# nest start --watch 
 Please, see [API_BASE_URL]/api to access the swagger documentation.
 
-#Cheers!
+# Cheers! 
 
 
