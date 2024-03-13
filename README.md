@@ -9,7 +9,7 @@ A NestJs application to manage users.
 ## Tools Used
 
 - Node.js
-- Nest.js frameworks
+- Nest.js framework
 - Sequelize ORM
 - Mysql Database
 - Nest.js Swagger for Documentation
