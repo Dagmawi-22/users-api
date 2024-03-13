@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsString } from 'class-validator';
+import { IsEmail, IsPhoneNumber, IsString } from 'class-validator';
 
 export class CreateUserDto {
   // Define user input on creating a user with validations
@@ -13,6 +13,6 @@ export class CreateUserDto {
   readonly email: string;
 
   @ApiProperty()
-  @IsString({ message: 'Phone must be a string' })
+  @IsPhoneNumber(undefined, { message: 'Invalid phone number format' })
   readonly phone: string;
 }
